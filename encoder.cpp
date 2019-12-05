@@ -1,4 +1,4 @@
-#include "encoder.h"
+#include "Encoder.h"
 
 
 #define PCNT_H_LIM_VAL      INT16_MAX/100
@@ -27,7 +27,7 @@ static void IRAM_ATTR pcnt_example_intr_handler(void *arg)
 
 Encoder::Encoder(pcnt_unit_t unit, uint8_t A, uint8_t B, Encoding encoding, uint16_t filter_length) : unit(unit){
 
-  
+
     /* Prepare configuration for the PCNT unit */
     pcnt_config_t pcnt_config_CH0 = {
         // Set PCNT input signal and control GPIOs
